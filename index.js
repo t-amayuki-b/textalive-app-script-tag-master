@@ -8,8 +8,11 @@
  * `script` タグで TextAlive App API を読み込んでいること以外は https://github.com/TextAliveJp/textalive-app-phrase と同内容です。
  */
 
+import P5 from "p5";
+
 const { Player, Ease } = TextAliveApp;
 
+//プレイヤーの初期化
 const player = new Player({
   app: {
     appAuthor: "Amayuki",
@@ -18,6 +21,7 @@ const player = new Player({
   mediaElement: document.querySelector("#media")
 });
 
+//
 player.addListener({
   onAppReady,
   onTimerReady,
@@ -36,7 +40,19 @@ const songSpan = document.querySelector("#song span");
 const phraseEl = document.querySelector("#container p");
 const beatbarEl = document.querySelector("#beatbar");
 
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+  background(31, 127, 255);
+}
+
+function draw(){
+  noStroke();
+  fill(255, 255, 0);
+  ellipse(width/2, height/2, height/2);
+}
+
 function onAppReady(app) {
+  //ホストが存在するかどうか
   if (!app.managed) {
     document.querySelector("#control").style.display = "block";
     playBtn.addEventListener("click", () => player.video && player.requestPlay());
@@ -49,6 +65,7 @@ function onAppReady(app) {
   }
 }
 
+//onVideoReadyイベントに続いて音源の再生準備が整うと発行されるイベント
 function onTimerReady() {
   artistSpan.textContent = player.data.song.artist.name;
   songSpan.textContent = player.data.song.name;
