@@ -12,7 +12,7 @@ const { Player, Ease } = TextAliveApp;
 
 const player = new Player({
   app: {
-    appAuthor: "Jun Kato",
+    appAuthor: "Amayuki",
     appName: "Basic example"
   },
   mediaElement: document.querySelector("#media")
