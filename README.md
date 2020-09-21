@@ -5,7 +5,7 @@ TextAlive App API のサンプルコードです。
 
 ビルドツールを何も使わず `script` タグで API を読み込んでいる点以外は [phrase example](https://github.com/TextAliveJp/textalive-app-phrase) とまったく同内容です。
 
-デモページ: https://textalivejp.github.io/textalive-app-script-tag/
+デモページ: https://t-amayuki-b.github.io/textalive-app-script-tag-master/
 
 TextAlive ホストと接続された状態をテストするには [TextAlive App Debugger](https://developer.textalive.jp/app/run/?ta_app_url=https://t-amayuki-b.github.io%2textalive-app-script-tag-master%2F&ta_song_url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DygY2qObZv24) のページにアクセスしてください。
 
