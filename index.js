@@ -8,7 +8,6 @@
  * `script` タグで TextAlive App API を読み込んでいること以外は https://github.com/TextAliveJp/textalive-app-phrase と同内容です。
  */
 
-import P5 from "p5";
 
 const { Player, Ease } = TextAliveApp;
 
@@ -40,16 +39,6 @@ const songSpan = document.querySelector("#song span");
 const phraseEl = document.querySelector("#container p");
 const beatbarEl = document.querySelector("#beatbar");
 
-function setup(){
-  createCanvas(windowWidth, windowHeight);
-  background(31, 127, 255);
-}
-
-function draw(){
-  noStroke();
-  fill(255, 255, 0);
-  ellipse(width/2, height/2, height/2);
-}
 
 function onAppReady(app) {
   //ホストが存在するかどうか
